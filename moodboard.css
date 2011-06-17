@@ -1,0 +1,29 @@
+.slides { position: relative; height: 420px; }
+.slide { position: absolute; left: 0; top: 0; z-index: 100; opacity: 0;
+    -webkit-transition: opacity 0.4s ease-out;
+    -moz-transition: opacity 0.4s ease-out;
+    transition: opacity 0.4s ease-out; }
+.nomoodcycle .slides, .nomoodcycle .slide {
+    position: relative; height: auto; opacity: 1; }
+.controls {
+    position: absolute; left: 50%; top: 50%; margin: -24px 0 0 -72px;
+    height: 48px; width: 144px; background: #ffffff; z-index: 200;
+    opacity: 0;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out; }
+.controls:hover, .controls.initial { opacity: 0.7; }
+.controls a {
+    display: block; width: 48px; height: 48px; float: left;
+    cursor: pointer; background: url(images/btn_pfeil.png) no-repeat 1px 2px;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out; }
+.controls a:hover { background-position: 0 -50px; }
+.controls a.play { background-image: url(images/btn_play.png); }
+.playing .controls a.play { background-position: -50px 0; }
+.playing .controls a.play:hover { background-position: -50px -50px; }
+.controls a.next { background-image: url(images/btn_pfeil_r.png); }
