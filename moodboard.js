@@ -96,9 +96,6 @@ moodboard slide container. The important attributes are:
             $mb.moodboard('playpause'); });
         $('<a class="next" />').appendTo($controls).bind('click', function() {
             $mb.moodboard('next'); });
-
-        $controls.addClass('initial');
-        setTimeout(function() { $controls.removeClass('initial'); }, 1000);
     }
 
     /**
@@ -136,9 +133,6 @@ moodboard slide container. The important attributes are:
                 heights: []
                 };
 
-        if (data.count <= 1)
-            return;
-
         data = $.extend(data, defaults, options);
 
         // The slides cannot be initialized on document.ready. We have to wait
@@ -162,7 +156,7 @@ moodboard slide container. The important attributes are:
 
                 $moodboard.data('moodboard', data);
 
-                if (data.autostart)
+                if (data.autostart && data.count > 1)
                     $moodboard.moodboard('playpause');
 
                 $moodboard.addClass('moodboard');
