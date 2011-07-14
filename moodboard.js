@@ -64,8 +64,12 @@ moodboard slide container. The important attributes are:
     slide except the first.
     */
     function _init_slides($mb, data) {
-        var i;
-        for (i=0; i<data.slides.length; i++) {
+        if (!data.width)
+            data.width = $mb.width();
+        if (!data.height)
+            data.height = $mb.height();
+
+        for (var i=0; i<data.slides.length; i++) {
             data.slides[i].css({
                 width: data.widths[i],
                 height: data.heights[i],
@@ -110,8 +114,8 @@ moodboard slide container. The important attributes are:
     }
 
     var defaults = {
-        width: 708,
-        height: 420,
+        width: null,
+        height: null,
         slide_time: 2500,
         autostart: true,
         controls: true,
