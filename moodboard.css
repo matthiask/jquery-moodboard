@@ -1,4 +1,4 @@
-.slides { position: relative; height: 420px; }
+.slides { position: relative; }
 .slide { position: absolute; left: 0; top: 0; z-index: 100; opacity: 0;
     -webkit-transition: opacity 0.4s ease-out;
     -moz-transition: opacity 0.4s ease-out;
