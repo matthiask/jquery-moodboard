@@ -74,7 +74,7 @@ moodboard slide container. The important attributes are:
                 width: data.widths[i],
                 height: data.heights[i],
                 left: Math.max(0, (data.width - data.widths[i]) / 2), // don't go below zero
-                top: (data.height - data.heights[i]) / 2,
+                top: Math.max(0, (data.height - data.heights[i]) / 2), // don't go below zero
                 opacity: (i == 0) ? 1 : 0
                 });
         }
